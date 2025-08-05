@@ -10,15 +10,17 @@ def get_book_text(file_path):
 
 def main(): 
 	freq = {}
-	file_path = "books/frankenstein.txt"
+	file_path = "books/frankenstein.txt"	
 	file_contents = get_book_text(file_path)
 	count = num_words(file_contents)
-	freq = char_freq(file_path)
-	print (f"{count} words found in the document")
-	#print (freq)
-	sort_char(freq)
-
-
-
+	freq = char_freq(file_path)	
+	
+	print("============ BOOKBOT ============")
+	print(f"Analyzing book found at {file_path}...")
+	print("----------- Word Count ----------")
+	print (f"Found {count} total words")
+	print ("--------- Character Count -------")
+	dict_list = sort_char(freq)
+	print("============= END ===============")
 main()
 

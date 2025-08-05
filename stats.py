@@ -15,6 +15,14 @@ def sort_char(freq):
     freq_list = []
     for char, value in freq.items():
         freq_list.append({"char": char, "num": value})
-
-    print (freq_list)
+    freq_list.sort(reverse=True, key=sort_on)
+    for dict in freq_list:
+        if dict["char"].isalpha():
+            print(f"{dict['char']}: {dict['num']}")
+    #print (freq_list)
     return freq_list
+
+def sort_on(items):
+    return items["num"]
+
+
