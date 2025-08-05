@@ -10,3 +10,11 @@ def char_freq(file_path):
         for ch in lower_case:
             freq[ch] = freq.get(ch, 0) + 1
     return freq
+
+def sort_char(freq):
+    freq_list = []
+    for char, value in freq.items():
+        freq_list.append({"char": char, "num": value})
+
+    print (freq_list)
+    return freq_list
